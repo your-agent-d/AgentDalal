@@ -1,0 +1,13 @@
+flask
+requests
+python-dotenv
+python-socketio
+flask-cors
+pydub
+elevenlabs
+langchain-core
+langgraph
+langchain
+langchain-anthropic
+pydantic
+typing-extensions
