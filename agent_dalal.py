@@ -4,7 +4,7 @@ from elevenlabs import ElevenLabs
 import io
 from pydub import AudioSegment
 import requests
-from all_creds import eleven_labs_api_key, zepto_login_number, anthropic_key
+from all_creds import eleven_labs_api_key, zepto_login_number, anthropic_key, openai_key
 
 os.environ["ANTHROPIC_API_KEY"] = anthropic_key
 os.environ["OPENAI_API_KEY"] = openai_key
