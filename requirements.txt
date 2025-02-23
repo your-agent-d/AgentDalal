@@ -11,3 +11,4 @@ langchain
 langchain-anthropic
 pydantic
 typing-extensions
+selenium

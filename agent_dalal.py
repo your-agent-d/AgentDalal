@@ -1,15 +1,17 @@
 import os
-os.environ["ANTHROPIC_API_KEY"] = "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"
-os.environ["OPENAI_API_KEY"] = "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"
-os.environ["PHONE"] = "8688927125"
 import re
 from elevenlabs import ElevenLabs
 import io
 from pydub import AudioSegment
 import requests
+from all_creds import eleven_labs_api_key, zepto_login_number, anthropic_key
+
+os.environ["ANTHROPIC_API_KEY"] = anthropic_key
+os.environ["OPENAI_API_KEY"] = openai_key
+os.environ["PHONE"] = zepto_login_number
 
 client = ElevenLabs(
-    api_key="sk_1a354dd558a60f77853ddc1f894ff8628a942bc432d2b5a7",
+    api_key=eleven_labs_api_key,
 )
 
 from langchain_core.messages.ai import AIMessage
@@ -488,7 +490,7 @@ from anthropic import Anthropic, HUMAN_PROMPT, AI_PROMPT
 def summarize_text(text):
     """Summarizes the given text using the Claude model."""
     try:
-        client = Anthropic(api_key="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")
+        client = Anthropic(api_key=anthropic_key)
         response = client.messages.create(
             model="claude-3-5-sonnet-20241022",
             system="You are a helpful assistant. You reply as if you are giving a response to a user. Reply in first person. Address the user as 'you'. Clearly state all the options user might have.",
