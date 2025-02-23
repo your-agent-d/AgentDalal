@@ -304,11 +304,12 @@ def create_app():
     return app, socketio
 
 
+from agent_dalal import handle_user_query
 if __name__ == "__main__":
     thread = threading.Thread(target=connect_with_glitch, args=(wa_phone_number, glitch_url))
     thread.start()
 
-    from agent_dalal import handle_user_query
+    # from agent_dalal import handle_user_query
     app, socketio = create_app()
     socketio.run(app, debug=False)
 

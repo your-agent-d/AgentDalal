@@ -12,3 +12,5 @@ langchain-anthropic
 pydantic
 typing-extensions
 selenium
+pillow
+rembg
